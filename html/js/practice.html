@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .slider {
+        width: 100%;
+        margin: 0% auto;
+    }
+    .slick-slide {
+      margin: 0px 0px;
+    }
+    .slick-slide img {
+      width: 100vw;
+      height: relative;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      color: black;
+    }
+    
+
+    
+  </style>
+</head>
+<body>
+
+
+  <section class="lazy slider" >
+    <div >
+      <img src="https://image.brandi.me/home/banner/bannerImage_75322_1559698612.jpg">
+    </div>
+    <div>
+      <img src="https://image.brandi.me/home/banner/bannerImage_74623_1559487811.jpg">
+    </div>
+    <div>
+      <img src="https://image.brandi.me/home/banner/bannerImage_4_1559663289.jpg">
+    </div>
+    <div>
+      <img src="https://image.brandi.me/home/banner/bannerImage_74014_1559266102.jpg">
+    </div>
+    <div>
+      <img src="https://image.brandi.me/home/banner/bannerImage_74734_1559488032.jpg">
+    </div>
+    <div>
+      <!-- this slide should inherit the sizes attr from the parent slider -->
+      <img src="https://image.brandi.me/home/banner/bannerImage_74833_1559521979.jpg">
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+  
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true,
+        dots: true,
+        prevArrow : false,
+        nextArrow : false,
+        
+      });
+    });
+</script>
+
+</body>
+</html>

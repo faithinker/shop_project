@@ -1,0 +1,15 @@
+@charset "utf-8";
+ul, li {
+  list-style: none;
+}
+body {background: #e3f2fd;}
+header .left { float: left; padding: 43px 0 0 78px;}
+header a { color: black}
+header h1 { float: left; padding: 0 180px 0 0}
+header h1 a { display: block; width:199px; height: 39px;  background: url("../images/logo_top.png") no-repeat; color: transparent;}
+header nav a {display: block; height: 50px; line-height:50px; font-size: 17px; font-weight: bold; }
+header .close, header .all, header .left > div > div, header h2{ display: none;}
+header.left > div {float : left;}
+header .left > div nav li {float: left;}
+header .left > div nav  li a {padding : 0 50px 0 0;}
+header > ul { float: right;}

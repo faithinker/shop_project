@@ -1,0 +1,100 @@
+@charset "utf-8";
+ul, li{
+  list-style: none;
+}
+header .left { float: left; padding: 43px 0 0 78px;}
+header a { color: black}
+header h1 { float: left; padding: 0 180px 0 0}
+header h1 a { display: block; width:199px; height: 39px;  background: url("../images/logo_top.png") no-repeat; color: transparent;}
+header nav a {display: block; height: 40px; line-height:40px; font-size: 17px; font-weight: bold; }
+/*body header nav > ul > li > a:before{ content: ""; position: absolute; left: 0; bottom: 13px; width: 0%; height: 1px;}
+body header nav > ul > li > a:hover:before{width: 100%; height: 1px; transition: all; background:  #fff }
+*/
+header .close, header .all, header .left > div > div, header h2{ display: none;}
+header.left > div {float : left;}
+header .left > div nav li {float: left; padding : 0 50px 0 0;}
+header .left > div nav  li a {padding : 0 50px 0 0;}
+header > ul { float: right; padding: 51px 40px 0 0;}
+body header nav ul .right, 
+body header nav .right > li {
+  float: right; padding: 0px 20px 0 0;
+  list-style-type: none;
+  
+  
+}
+body header nav .right > li> a{
+  color : black;
+}
+body header nav .right > li> a:hover{
+  text-decoration: none !important;
+  color : white;
+  
+}
+
+body header nav .right {
+  margin-bottom : 0px;
+}
+
+.top_banner {
+  display: block;
+  width: 100%;
+  background: #a9d5e2;
+  overflow: hidden;
+  line-height: 1px;
+  font-size: 1px;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  word-break: keep-all;
+}
+a:link{
+  text-decoration: none;
+}
+
+
+  .title tr > td > font{
+		margin-left:10px;
+	}
+	@media (max-width:700px){
+    .frame {
+        padding: 0px 20px;
+    }
+    body {
+        font-size: 12px;
+    }
+  }
+	.frame{
+		position: relative;
+    z-index: 2;
+		width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+    clear: both;
+    padding: 0px 30px;
+    overflow: hidden;
+		box-sizing: border-box;
+		display: block;
+	}
+	.list_full  ul {
+	  width: 47%;
+    margin: 10px 1% 20px 1%;
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+		padding: 0px;
+    list-style: none;
+		margin-block-start: 1em;
+    margin-block-end: 1em;
+    list-style: none;
+  }
+  .list_full ul > li {
+    padding: 2px 0px;
+    display: list-item;
+    list-style: none;
+    font-size: 15px;
+  }
+	.list_image img {
+		width: 50%;
+
+  }

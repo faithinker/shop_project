@@ -1,0 +1,82 @@
+<!-------------------------------------------------------------------------------------------->	
+<!-- 프로그램 : 쇼핑몰 따라하기 실습지시서 (실습용 HTML)                                    -->
+<!--                                                                                        -->
+<!-- 만 든 이 : 김주협 (2019.03 - 2019.06)                                                          -->
+<!-------------------------------------------------------------------------------------------->	
+<?
+	include "common.php";
+?>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="쇼필몽 만들기 실습">
+  <meta name="author" content="김주협">
+	
+	<title>성적처리 프로그램</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="font.css">
+</head>
+<body>
+
+<!--입력 추가 -->
+<table width="200" border="0">
+	<tr>
+		<td align="right"><a href="sj_new.html">입력</a></td>
+	</tr>
+</table>
+
+<table width="400" border="1" cellpadding="2" style="border-collapse:collapse">
+	<tr bgcolor="lightblue">
+		<td width="100" align="center">이름</td>
+		<td width="50" align="center">국어</td>
+		<td width="50" align="center">영어</td>
+		<td width="50" align="center">수학</td>
+		<td width="50" align="center">총점</td>
+		<td width="50" align="center">평균</td>
+		<td width="50" align="center">삭제</td>
+	</tr>
+	<?
+		$query="select * from sj order by name21;";
+		$result=mysqli_query($db,$query);
+		if(!$result) exit("에러 : $query");
+	
+		$count=mysqli_num_rows($result);
+	
+		for ($i=0; $i<$count; $i++)
+		{
+			$row=mysqli_fetch_array($result);
+			$avg=sprintf("%6.1f",$row[avg21]);
+			echo("<tr bgcolor='lightyellow'>
+				<td align='center'>$nbsp $row[name21]</td>
+				<td align='center'>$nbsp $row[kor21]</td>
+				<td align='center'>$nbsp $row[eng21]</td>
+				<td align='center'>$nbsp $row[mat21]</td>
+				<td align='center'>$nbsp $row[hap21]</td>
+				<td align='right'>$avg &nbsp</td>
+				<td align='center'><a href='sj_delete.php?no=$row[no21]'
+				onClick='javascript:return confirm(\"삭제할까요?\");'>
+				삭제</a></td>
+			</tr>");
+		}
+	?>
+	<tr bgcolor="lightyellow">
+		<td width="100">김길동</td>
+		<td width="50" align="right">90</td>
+		<td width="50" align="right">90</td>
+		<td width="50" align="right">90</td>
+		<td width="50" align="right">270</td>
+		<td width="50" align="right">90.0</td>
+	</tr>
+	<tr bgcolor="lightyellow">
+		<td width="100">이길동</td>
+		<td width="50" align="right">80</td>
+		<td width="50" align="right">80</td>
+		<td width="50" align="right">80</td>
+		<td width="50" align="right">240</td>
+		<td width="50" align="right">80.0</td>
+	</tr>
+</table>
+
+</body>
+</html>
